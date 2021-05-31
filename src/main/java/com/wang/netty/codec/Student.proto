@@ -1,0 +1,12 @@
+syntax = "proto3"; //版本
+option java_outer_classname="StudentPOJO";//生成的外部类名，同时也是文件名
+// protobuf使用message管理数据
+message Student{
+  int32 id = 1; //Student类中有一个属性名字为ID，类型为int32（protobuf类型），1表示序号，不是值
+  string name = 2;
+}
+
+enum DateType {
+  StudentType = 0; //在proto3中，要求enum的编号从0开始
+  WorkerType = 1;
+}
